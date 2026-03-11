@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "package": "rm -rf _staging && mkdir -p _staging/frontend && cp -r dist/. _staging/frontend/ && (cd _staging && zip -r ../foodsaving-plugin.zip frontend) && rm -rf _staging"
   },
   "dependencies": {
     "@tanstack/vue-query": "^5.92.9",
